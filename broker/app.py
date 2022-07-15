@@ -12,5 +12,12 @@ flask_api = Api(flask_app, version='1.0', title='RT Broker API', description='Re
 
 
 def run(debug: bool):
+	print()
+	
+	if debug:
+		print("Running in Development mode")
+	else:
+		print("Running in Production mode")
+	
 	flask_app.run(debug=debug)
 

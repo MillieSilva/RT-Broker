@@ -1,4 +1,4 @@
-__all__ = ['discovery', 'registry']
+__all__ = ['registry']
 
 ## System Imports
 

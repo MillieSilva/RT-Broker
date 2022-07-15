@@ -9,7 +9,7 @@ from . import *
 
 
 def initialize_app(debug: bool):
-	database.setup()
+	database.initialize()
 	
-	app.run(True)
+	app.run(debug)
 

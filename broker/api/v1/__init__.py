@@ -1,4 +1,4 @@
-__all__ = ['client', 'server']
+__all__ = ['worker', 'watcher']
 
 ## System Imports
 
