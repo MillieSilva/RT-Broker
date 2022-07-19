@@ -1,5 +1,7 @@
 ## System Imports
 from uuid import UUID, uuid4
+from typing import Optional
+
 
 ## Application Imports
 from broker import database
@@ -17,7 +19,7 @@ def get_available_uuid() -> UUID:
 	return uuid
 
 
-def register(hwid: str) -> str | None:
+def register(hwid: str) -> Optional[str]:
 	uuid = str(get_available_uuid())
 	
 	workers_cursor = database.database_connection.execute('''INSERT INTO Workers (Id, HwId) VALUES (?, ?)''',
@@ -59,7 +61,7 @@ def synchronize(uuid: str, ipv4: str):
 	database.database_connection.commit()
 
 
-def get_uuid(hwid: str) -> str | None:
+def get_uuid(hwid: str) -> Optional[str]:
 	cursor = database.database_connection.execute('''
 		SELECT Id FROM Workers WHERE Workers.HwId = ?;
 	''', (hwid, ))

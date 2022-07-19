@@ -9,6 +9,10 @@ flask-restx = "*"
 flask-api = "*"
 
 [dev-packages]
+pytest = "*"
 
 [requires]
-python_version = "3.10"
+python_version = "3.9"
+
+[scriots]
+test = "pytest"

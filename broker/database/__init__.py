@@ -4,6 +4,7 @@ __all__ = ['workers']
 from pathlib import Path
 import sqlite3
 from sqlite3 import Connection
+from typing import Optional
 
 
 ## Application Imports
@@ -11,10 +12,11 @@ from . import *
 
 ## Library Imports
 
+
 database_directory = f'data'
 database_path = f'{database_directory}/metadata.sql'
 
-database_connection: Connection | None = None
+database_connection: Optional[Connection] = None
 
 
 def initialize():
