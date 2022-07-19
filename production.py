@@ -1,10 +1,13 @@
 ## System Imports
 
 ## Application Imports
+from broker import database
+from broker.app import flask_app as application
 
 ## Library Imports
-import broker
+
 
 if __name__ == '__main__':
-	broker.initialize_app(False)
+	database.initialize()
+	application.run()
 
