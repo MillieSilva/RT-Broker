@@ -26,8 +26,8 @@ jobs:
         pip install pipenv
         pipenv sync
 
-    - name: Test production script
+    - name: Test
       run: |
-        pipenv run python production.py
+        pipenv run pytest
 
 
