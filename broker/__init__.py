@@ -10,5 +10,5 @@ from . import *
 
 def initialize_app():
 	database.initialize()
-	app.flask_app.run()
+	app.flask_app.run(host='0.0.0.0')
 
