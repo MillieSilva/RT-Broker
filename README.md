@@ -6,11 +6,11 @@ Protocols, unique GUIDs)
 It is used to dispatch data for valid connections from end to end,
 acting as a middleman
 
-## Requirements
- - Python 3.10
- - Pipenv
+
+## Setting up
+To setup for development or production, check [Deployment](Docs/Deployment.md) steps
 
 ## Running in production
-To run the broker for production, simply run the application as
-`python production.py`
+To run the broker for production, run the uwsgi server with:
+`uwsgi uwsgi.ini`
 

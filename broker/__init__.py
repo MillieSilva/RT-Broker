@@ -8,8 +8,7 @@ from . import *
 ## Library Imports
 
 
-def initialize_app(debug: bool):
+def initialize_app():
 	database.initialize()
-	
-	app.run(debug)
+	app.flask_app.run()
 
