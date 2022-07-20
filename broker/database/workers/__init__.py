@@ -18,7 +18,7 @@ def setup_tables(connection: Connection):
 	
 	connection.execute('''
 		CREATE TABLE Addresses (
-			 Id 			CHAR(38) 		PRIMARY KEY     	NOT NULL,
+			 Id 			CHAR(38) 					     	NOT NULL,
 	         public_ipv4    CHAR(15)     						NOT NULL
 		);
 	''')
